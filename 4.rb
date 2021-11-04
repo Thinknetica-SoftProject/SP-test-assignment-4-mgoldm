@@ -15,5 +15,40 @@
 #
 #
 ## Решение:
+f1 = File.open('data\4.txt', 'r')
+summa=0
+def is_number? string
+  true if Float(string) rescue false
+end
 
+while (line = f1.gets)
+  #puts (line)
+  massiv = Array[]
+  el = ''
+  for i in 0..line.length
+    #puts(line.length)
+    if is_number?(line[i])==true
+      el = el + line[i].to_s
+    elsif is_number?(line[i])==false
+      b = el.to_i
+      #puts(b)
+      if b!=0
+        massiv.push(b)
+        el = ''
+      end
+    end
+
+  end
+  maxim=massiv.max
+  minim=massiv.min
+  for i in 0..massiv.length
+    if massiv[i].to_i<maxim and massiv[i].to_i>minim
+      sred=massiv[i]
+    end
+  end
+  #Формула рассчета: 2*ш*д + 2*д*в + 2*в*ш + площадь наименьшей стороны
+  formula=(2*maxim*minim)+(2*minim*sred)+(2*sred*maxim)+(minim*sred)
+  summa = summa + formula
+end
+puts(summa)
 

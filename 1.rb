@@ -15,6 +15,21 @@
 #
 #
 ## Решение:
+f1=File.readlines('data\1.txt', "r")
+f2=File.open('data\1.txt', "r")
+text=f1.join
+c=0
+line=f2.gets
+for i in 0..text.length
+  if line[i] =='('
+    c=c+1
+    #print(c)
+  elsif line[i]==')'
+    c=c-1
+  end
+  i=i+1
+end
+puts(c)
 
 
 

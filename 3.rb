@@ -9,5 +9,28 @@
 # - Результат должен быть выведен в консоль командой puts
 #
 ## Решение:
+sum=0
+f1=File.open('data\3.txt', 'r')
 
+def is_number? string
+  true if Float(string) rescue false
+end
 
+while (line = f1.gets)
+  massiv=Array[]
+  el=''
+  for i in 0..line.length
+    if is_number?(line[i])==true
+      el=el+line[i].to_s
+    elsif is_number?(line[i])==false
+      b=el.to_i
+      if b!=0
+        massiv.push(b)
+        el=''
+      end
+    end
+  end
+  rasn=massiv.max.to_i - massiv.min.to_i
+  sum=sum+rasn
+end
+print(sum)
