@@ -10,7 +10,7 @@
 #
 ## Решение:
 sum=0
-f1=File.open('data\3.txt', 'r')
+f1=File.open('data/3.txt', 'r')
 
 def is_number? string
   true if Float(string) rescue false

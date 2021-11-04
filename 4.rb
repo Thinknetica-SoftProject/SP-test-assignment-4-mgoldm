@@ -15,7 +15,7 @@
 #
 #
 ## Решение:
-f1 = File.open('data\4.txt', 'r')
+f1 = File.open('data/4.txt', 'r')
 summa=0
 def is_number? string
   true if Float(string) rescue false
