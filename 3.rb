@@ -33,4 +33,4 @@ while (line = f1.gets)
   rasn=massiv.max.to_i - massiv.min.to_i
   sum=sum+rasn
 end
-print(sum)
+puts(sum)
