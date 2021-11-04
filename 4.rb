@@ -37,15 +37,13 @@ while (line = f1.gets)
         el = ''
       end
     end
+    #puts (massiv)
+  end
 
-  end
-  maxim=massiv.max
-  minim=massiv.min
-  for i in 0..massiv.length
-    if massiv[i].to_i<maxim and massiv[i].to_i>minim
-      sred=massiv[i]
-    end
-  end
+  massiv=massiv.sort
+  maxim=massiv[2]
+  minim=massiv[0]
+  sred=massiv[1]
   #Формула рассчета: 2*ш*д + 2*д*в + 2*в*ш + площадь наименьшей стороны
   formula=(2*maxim*minim)+(2*minim*sred)+(2*sred*maxim)+(minim*sred)
   summa = summa + formula
