@@ -15,8 +15,8 @@
 #
 #
 ## Решение:
-f1=File.readlines('data\1.txt', "r")
-f2=File.open('data\1.txt', "r")
+f1=File.readlines('data/1.txt', "r")
+f2=File.open('data/1.txt', "r")
 text=f1.join
 c=0
 line=f2.gets
